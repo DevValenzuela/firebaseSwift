@@ -84,7 +84,7 @@ class InicioViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                       "id":id,
                       "portada":String(describing: directorio)]
         
-        ref.child(plataforma).child(id).setValue(campos)
+        ref.child(plataforma).child(id!).setValue(campos)
         cargador.isHidden = false
         cargador.startAnimating()
         print("guardo")
